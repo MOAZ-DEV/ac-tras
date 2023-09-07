@@ -1,0 +1,119 @@
+@import "../../styling/fonts.scss";
+
+.footerLayout {
+    @include DFC;
+    @include sc(1200px) {
+        padding: 45px 75px;
+    }
+    @include sc(895px) {
+        padding: 45px;
+    }
+    @include sc(675px) {
+        padding: 45px 25px;
+    }
+    justify-content: start;
+    align-items: start;
+    gap: 45px;
+
+    padding: 75px 125px 42.5px 125px;
+background: black;
+    color: white;
+
+    width: 100vw;
+
+    footer {
+        @include DFR;
+        @include sc(895px) {
+            @include DFC;
+        }
+        justify-content: start;
+        align-items: start;
+        gap: 45px;
+
+width: 100%;
+
+        .menuWrap {
+            @include DFR;
+            @include sc(895px) {
+                justify-content: space-between;
+                width: clamp(300px, 100%, 500px);
+            }
+            @include sc(445px) {
+                flex-wrap: wrap;
+            }
+            align-items: start;
+            gap: 45px;
+
+            ul {
+                @include sc(445px) {
+                    flex-wrap: wrap;
+                }
+                @include rsc(445px) {
+                    @include DFC;
+                }
+                align-items: start;
+                gap: 10px;
+                span {
+                    margin: 0 0 15px 0;
+                }
+                li {
+                    width: max-content;
+                    opacity: 0.25;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .subscribeWrap {
+            @include DFC;
+            align-items: start;
+            gap: 10px;
+
+            width: auto;
+
+            span.RB5 {
+                opacity: 0.25;
+            }
+
+            form {
+                @include DFR;
+                width: 100%;
+
+                span {
+                    margin: 0 0 15px 0;
+                    &.RB5 {
+                        opacity: 0.25;
+                    }
+                }
+                input[type="email"] {
+                    border-radius: 2px;
+                    border: 0.5px solid #d9d9d946;
+                    border-right: 0;
+                    padding: 13px 25px;
+                    max-height: 54px;
+                    width: 100%;
+                }
+                input[type="submit"] {
+                    @include primaryS;
+                    padding: 12px 25px;
+                    max-height: 53px;
+                }
+            }
+        }
+    }
+    .metaFooter {
+        @include DFR;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        width: 100%;
+
+        .smWrap,
+        .resWrap {
+            @include DFR;
+            gap: 25px;
+        }
+    }
+}

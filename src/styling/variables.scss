@@ -1,0 +1,36 @@
+$BG: #212121;
+$DBG: #161616;
+$OBG: #000;
+$TC: #fff;
+$T45: rgba(255, 255, 255, 0.45);
+$T25: rgba(255, 255, 255, 0.25);
+$T05: rgba(255, 255, 255, 0.05);
+$ACC: #FF3030;
+
+div[aria-details='devider'] {
+    min-height: 1px;
+    width: 100%;
+
+    background: #000;
+    opacity: .25;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid white;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    height: fit-content;
+    width: fit-content;
+
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+
+    list-style: none;
+
+    background: none;
+}

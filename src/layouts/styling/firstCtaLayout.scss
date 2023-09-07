@@ -1,0 +1,88 @@
+@import "..//../styling/fonts.scss";
+
+.firstCtaLayout {
+    @include DFR;
+    @include sc(1400px) {
+        padding: 75px 0px 45px 75px;
+        gap: 45px;
+    }
+    @include sc(845px) {
+        @include DFC;
+        padding: 45px 0px 45px 45px;
+        gap: 45px;
+    }
+    @include sc(675px) {
+        flex-direction: column-reverse;
+        padding: 45px 0px 105px 25px;
+    }
+    align-items: start;
+    justify-content: space-between;
+    gap: 45px;
+
+    overflow-x: clip;
+    overflow-y: unset;
+
+    min-height: max-content;
+
+    padding: 125px 0px 125px 125px;
+
+    width: 100vw;
+
+    .textWrap {
+        @include DFC;
+        @include sc(845px) {
+            width: auto;
+        }
+        align-items: start;
+        gap: 25px;
+
+        width: clamp(300px, 50vw, 1000px);
+.bodyWrap {
+    @include DFC;
+    gap: 10px;
+}
+        span {
+            @include sc(1200px) {
+                padding: 0 75px 0 45px;
+            }
+            @include sc(875px) {
+                padding: 0 45px 0 25px;
+            }
+            @include sc(575px) {
+                padding: 0 25px 0 05px;
+            }
+            width: auto;
+            padding: 0 145px 0 75px;
+            &.H1 {
+                padding: 0;
+            }
+        }
+    }
+    .imgWrap {
+        @include sc(845px) {
+            max-width: unset;
+        }
+        max-width: 50%;
+
+        img {
+            height: fit-content;
+            width: auto;
+
+            object-fit: cover;
+            object-position: 50% 50%;
+            aspect-ratio: 4/4;
+        }
+    }
+    .btnsWrap {
+        @include DFC;
+        align-items: start;
+        gap: 15px;
+
+        .pri {
+            @include primary;
+        }
+        .sec {
+            @include secondaryB;
+        }
+    }
+}

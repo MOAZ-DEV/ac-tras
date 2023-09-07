@@ -1,0 +1,202 @@
+@import "./mixins&autos.scss", "./variables.scss",
+    'https://api.fontshare.com/v2/css?f[]=clash-display@200,Regular,700,500,500,1,Regular&display=swap" rel="stylesheet';
+* {
+    font-family: "Clash Display", sans-serif;
+}
+
+/*
+Headlines
+H1 64
+H2 48
+H3 32
+H4 24
+H5 20
+H6 18
+Bodies
+B1 20
+B2 18
+B3 16
+B4 14
+B5 12
+*/
+
+.H1 {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 90%;
+
+    @include sc(895px) {
+        font-size: 48px;
+    }
+}
+.H2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 90%;
+
+    @include sc(895px) {
+        br {
+            display: none;
+        }
+        font-size: 40px;
+    }
+}
+.H3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 90%;
+}
+.H4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 90%;
+}
+.H5 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 90%;
+}
+.H6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.BB1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 125%;
+
+    @include sc(895px) {
+        font-size: 18px;
+    }
+    @include sc(575px) {
+        font-size: 16px;
+    }
+}
+.BB2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+.BB3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.BB4 {
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    &[aria-selected],
+    &:hover {
+        color: $ACC;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+.BB5,
+li {
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+    &[aria-selected],
+    &:hover {
+        color: $ACC;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
+.RB1 {
+    font-size: 20px;
+    font-weight: Regular;
+    line-height: 125%;
+
+    @include sc(895px) {
+        font-size: 18px;
+    }
+    @include sc(575px) {
+        font-size: 16px;
+    }
+}
+.RB2 {
+    font-size: 18px;
+    font-weight: Regular;
+}
+.RB3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.RB4 {
+    font-size: 14px;
+    font-weight: Regular;
+    line-height: 90%;
+}
+.RB5 {
+    font-size: 12px;
+    font-weight: Regular;
+}
+
+@mixin secondaryS {
+    @include DFR;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    height: 45px;
+
+    padding: 10px 25px;
+
+    color: white;
+    border: 1px solid white;
+}
+@mixin secondaryB {
+    @include DFR;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 18px 30px;
+
+    color: black;
+    border: 1px solid black;
+}
+@mixin primaryS {
+    @include DFR;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    height: 45px;
+
+    padding: 12px 25px;
+
+    color: white;
+    background: $ACC;
+}
+@mixin secondary {
+    @include DFR;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 18px 30px;
+
+    color: black;
+    background: white;
+}
+@mixin primary {
+    @include DFR;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 18px 30px;
+
+    color: white;
+    background: $ACC;
+}

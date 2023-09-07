@@ -1,0 +1,282 @@
+@import "..//../styling/fonts.scss";
+
+.headerLayout {
+    @include DFC;
+    align-items: start;
+
+    width: 100%;
+    background: url("..//../assets/hero.png") no-repeat 50% 50%;
+    background-size: cover;
+
+    nav {
+        @include DFR;
+        justify-content: space-between;
+        gap: 45px;
+
+        position: sticky;
+        top: 0;
+        width: 100%;
+
+        z-index: 100;
+
+        ul {
+            @include DFR;
+            @include sc(1200px) {
+                display: none;
+            }
+            gap: 25px;
+
+            margin-right: auto;
+
+            .logo {
+                img {
+                    height: 100px;
+                }
+            }
+            li {
+                color: white;
+            }
+        }
+        .btnsWrap {
+            @include DFR;
+            gap: 25px;
+
+            padding: 0 45px;
+
+            .sec {
+                @include secondaryS;
+            }
+            .pri {
+                @include primaryS;
+            }
+            .sec,
+            .pri {
+                @include sc(725px) {
+                    display: none;
+                }
+            }
+            .menuBtn {
+                margin-left: 25px;
+                @include rsc(1200px) {
+                    display: none;
+                }
+            }
+            .sec,
+            .pri,
+            .menuBtn {
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
+    .fullMenu {
+        @include DFC;
+        @include rsc(1200px) {
+            display: none;
+        }
+        gap: 25px;
+
+        z-index: 95;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        height: clamp(100vh, 100vh, 100vh);
+        width: 100vw;
+
+        background: black;
+
+        animation: dropMenu 0.5s ease;
+        transition: all 0.5s;
+
+        color: white;
+
+        padding-top: 100px;
+
+        @include SCL;
+        overflow: auto;
+
+        ul {
+            @include DFC;
+            justify-content: center;
+            align-items: start;
+            gap: 15px;
+
+            height: 100%;
+            width: 100%;
+
+            padding: 75px;
+
+            margin-bottom: auto;
+        }
+        .btnsWrap {
+            @include DFC;
+            gap: 10px;
+
+            padding: 0 45px;
+
+            width: -webkit-fill-available;
+
+            .sec {
+                @include secondaryS;
+            }
+            .pri {
+                @include primaryS;
+            }
+            .sec,
+            .pri {
+                width: -webkit-fill-available;
+                @include rsc(725px) {
+                    display: none;
+                }
+            }
+        }
+        .metaFooter {
+            @include DFC;
+            align-items: center;
+            gap: 10px;
+
+            padding: 45px;
+
+            .smWrap,
+            .resWrap {
+                @include DFR;
+                gap: 25px;
+            }
+        }
+    }
+    .cta {
+        @include DFC;
+        @include sc(1200px) {
+            padding: 45px 75px;
+        }
+        @include sc(895px) {
+            padding:  45px;
+        }
+        @include sc(675px) {
+            padding: 105px 25px;
+        }
+        align-items: start;
+        gap: 25px;
+
+        padding: 75px 125px;
+
+        color: white;
+
+        width: clamp(300px, 945px, 100%);
+
+        .btnsWrap {
+            @include DFR;
+            @include sc(900px) {
+                @include DFC;
+                align-items: start;
+            }
+            gap: 15px;
+
+            padding-top: 15px;
+
+            .pri {
+                @include primary;
+            }
+            .sec {
+                @include secondary;
+            }
+        }
+    }
+}
+.overlayWrap {
+    @include DFR;
+    @include sc(1300px) {
+        padding: 0 75px;
+    }
+    @include sc(895px) {
+        padding: 0 45px;
+        height: 275px;
+    }
+    @include sc(670px) {
+        padding: 0 25px;
+        height: fit-content;
+    }
+    padding: 0 125px;
+
+    justify-content: right;
+
+    height: 0;
+    width: 100vw;
+
+    .overlayPop {
+        @include DFR;
+        @include sc(1300px) {
+            transform: translateY(75px);
+            @include DFC;
+            width: 300px;
+        }
+        @include sc(895px) {
+            transform: translateY(-75px);
+        }
+        @include sc(665px) {
+            transform: translateY(40%);
+            width: calc(100vw - 50px);
+        }
+        @include sc(670px) {
+            transform: translateY(-5%);
+            width: calc(100vw - 50px);
+        }
+        gap: 25px;
+
+        z-index: 50;
+        transform: translateY(-40px);
+
+        padding: 5px 25px 25px 25px;
+
+        width: 600px;
+        background: white;
+
+        border-top: 7px outset white;
+        border-bottom: 1px inset #ff3030;
+        box-shadow: 0px 4px 122px 0px rgba(255, 48, 48, 0.2);
+
+        .topGraphic {
+            @include DFR;
+            @include rsc(575px) {
+                min-width: auto;
+            }
+            @include sc(895px) {
+                min-width: 250px;
+            }
+
+            height: 25px;
+            min-height: 25px;
+            width: -webkit-fill-available;
+
+            z-index: 10000;
+
+            position: absolute;
+            top: -25px;
+            left: 0;
+
+            outline: 0;
+            border: 0;
+
+            border: 1px white;
+            object-fit: cover;
+        }
+        .imgWrap {
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+            max-height: max-content;
+            img {
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 19/11;
+            }
+        }
+        .wraper {
+            @include DFC;
+            align-items: start;
+            gap: 10px;
+        }
+    }
+}

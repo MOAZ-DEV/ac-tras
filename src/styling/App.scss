@@ -1,0 +1,29 @@
+@import "./fonts.scss", "./mixins&autos.scss", "./variables.scss";
+html, body {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+
+    overflow: hidden
+}
+.app {
+    @include DFC;
+
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+
+    @include SCL;
+}
+@keyframes dropMenu {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 100vh;
+    }
+}

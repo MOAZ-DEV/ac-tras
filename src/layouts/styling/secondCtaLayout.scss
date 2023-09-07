@@ -1,0 +1,121 @@
+@import "../../styling/fonts.scss";
+
+.secondCtaLayout {
+    @include DFR;
+    @include sc(1400px) {
+        padding: 75px;
+        gap: 45px;
+    }
+    @include sc(1200px) {
+        @include DFC;
+        padding: 45px;
+        gap: 45px;
+    }
+    @include sc(675px) {
+        padding: 75px 25px;
+    }
+    align-items: start;
+    justify-content: space-between;
+    gap: 45px;
+
+    overflow-x: clip;
+    overflow-y: unset;
+
+    min-height: max-content;
+
+    padding: 125px;
+
+    width: 100vw;
+
+    .cta {
+        @include DFC;
+        @include sc(845px) {
+            width: auto;
+            padding-left: 0;
+        }
+        padding-left: 125px;
+        align-items: start;
+        gap: 25px;
+
+        .bodyWrap {
+            @include DFC;
+            gap: 10px;
+
+            @include sc(1200px) {
+                padding: 0 75px 0 45px;
+            }
+            @include sc(875px) {
+                padding: 0 45px 0 25px;
+            }
+            @include sc(575px) {
+                width: auto;
+                padding: 0 25px 0 45px;
+            }
+            width: 645px;
+            padding-left: 75px;
+            
+        }
+        
+    }
+    .boxesWarp {
+        @include DFC;
+        gap: 25px;
+        
+        @include sc(1200px) {
+            padding: 0 0px 0 45px;
+            width: auto;
+        }
+        @include sc(875px) {
+            padding: 0;
+        }
+        @include sc(575px) {
+            padding: 0;
+        }
+        padding-right: 75px;
+        width: 35%;
+        max-width: 500px;
+
+        .ctaBox {
+            @include DFC;
+            
+            gap: 0;
+            .contentWrap {
+                @include DFC;
+               
+                align-items: start;
+                gap: 15px;
+
+                max-height: max-content;
+
+                border: 1px inset $ACC;
+                border-top: 0;
+
+                padding: 0 25px 25px 25px;
+
+                transition: all 0.5s ease;
+
+                .pri {
+                    @include primary;
+                    width: 100%;
+                }
+            }
+            svg {
+                width: -webkit-fill-available;
+                transform: translateY(1px);
+            }
+            &[aria-selected="false"] {
+                .contentWrap {
+                    background: #EBEBEB;
+                }
+                .pri {
+                    position: absolute;
+                    max-height: 0;
+                    padding: 0;
+                    opacity: 0;
+
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
